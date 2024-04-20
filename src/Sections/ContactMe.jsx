@@ -1,11 +1,5 @@
-import React from 'react'
-
 function ContactMe() {
-  return (
-    <div>
-      
-    </div>
-  )
+	return <div className="h-screen w-full"></div>;
 }
 
-export default ContactMe
+export default ContactMe;

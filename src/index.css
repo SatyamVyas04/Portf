@@ -27,11 +27,12 @@
 html {
 	background-color: theme("colors.base");
 	scrollbar-width: thin;
+	scroll-behavior: smooth;
 }
 
 @layer components {
 	.heading {
-		@apply font-SpaceMed md:text-6xl lg:text-8xl text-4xl text-header;
+		@apply font-SpaceMed md:text-7xl lg:text-8xl text-4xl text-header;
 	}
 
 	.subtext {
@@ -39,14 +40,14 @@ html {
 	}
 
 	.smallsubtext {
-		@apply font-SpaceMed md:text-xl text-[1rem] text-subtext;
+		@apply font-SpaceMed md:text-xl text-[1rem] text-[#DDDDDD];
 	}
 
 	hr {
-		@apply border-primary w-auto mx-16 sm:mx-0 sm:my-4 my-2;
+		@apply border-primary w-auto mx-24;
 	}
 
 	.card {
-		@apply w-full h-full flex items-center border-2 border-primary backdrop-blur-sm bg-accent bg-opacity-10 hover:bg-opacity-15 transition-all p-4 rounded-md;
+		@apply w-full h-full flex items-center border-2 p-8 border-primary backdrop-blur-sm bg-accent bg-opacity-10 hover:bg-opacity-15 transition-all rounded-md smallsubtext hover:shadow-[0px_0px_24px_#7580F0];
 	}
 }
