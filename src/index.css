@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer base {
+	@font-face {
+		font-family: "SpaceGroteskRegular";
+		src: url("/Fonts/SpaceGroteskRegular.ttf");
+	}
+
+	@font-face {
+		font-family: "SpaceGroteskLight";
+		src: url("/Fonts/SpaceGroteskLight.ttf");
+	}
+
+	@font-face {
+		font-family: "SpaceGroteskMedium";
+		src: url("/Fonts/SpaceGroteskMedium.ttf");
+	}
+
+	@font-face {
+		font-family: "SpaceGroteskBold";
+		src: url("/Fonts/SpaceGroteskSemibold.ttf");
+	}
+}
+
+html {
+	background-color: theme("colors.base");
+	scrollbar-width: thin;
+}
+
+@layer components {
+	.heading {
+		@apply font-SpaceMed md:text-6xl lg:text-8xl text-4xl text-header;
+	}
+
+	.subtext {
+		@apply font-SpaceBase md:text-4xl text-2xl text-subtext;
+	}
+
+	.smallsubtext {
+		@apply font-SpaceMed md:text-xl text-[1rem] text-subtext;
+	}
+
+	hr {
+		@apply border-primary w-auto mx-16 sm:mx-0 sm:my-4 my-2;
+	}
+
+	.card {
+		@apply w-full h-full flex items-center border-2 border-primary backdrop-blur-sm bg-accent bg-opacity-10 hover:bg-opacity-15 transition-all p-4 rounded-md;
+	}
+}
