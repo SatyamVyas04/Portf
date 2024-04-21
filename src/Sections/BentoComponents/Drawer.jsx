@@ -72,7 +72,7 @@ const DragCloseDrawer = ({ open, setOpen, children }) => {
 						transition={{
 							ease: "easeInOut",
 						}}
-						className="absolute bottom-0 h-[75vh] w-full overflow-hidden rounded-t-3xl bg-neutral-900"
+						className="absolute bottom-0 h-[80vh] w-full overflow-hidden rounded-t-3xl bg-neutral-900"
 						style={{ y }}
 						drag="y"
 						dragControls={controls}
@@ -99,7 +99,12 @@ const DragCloseDrawer = ({ open, setOpen, children }) => {
 								className="h-2 w-14 cursor-grab touch-none rounded-full bg-neutral-700 active:cursor-grabbing"
 							></button>
 						</div>
-						<div className="relative z-0 h-full overflow-y-scroll p-4 pt-12">
+						<div
+							className="relative z-0 h-full overflow-y-auto p-4 pt-12"
+							style={{
+								scrollbarWidth: "thin",
+							}}
+						>
 							{children}
 						</div>
 					</motion.div>

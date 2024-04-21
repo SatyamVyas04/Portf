@@ -41,7 +41,7 @@ function HeroSection() {
 				className="heading mt-8 sm:mt-0 text-center sm:text-start underline decoration-primary underline-offset-4 sm:underline-offset-6 md:underline-offset-8 lg:underline-offset-[10px]"
 				initial={{ y: 20, opacity: 0 }}
 				whileInView={{ y: 0, opacity: 1 }}
-				transition={{ delay: 1.2 }}
+				transition={{ delay: 1.2, ease: "easeOut"}}
 				viewport={{ once: true }}
 			>
 				Satyam Vyas
@@ -61,7 +61,7 @@ function HeroSection() {
 						}}
 						initial="hidden"
 						whileInView="visible"
-						transition={{ delay: 0.4 * idx }}
+						transition={{ delay: 0.4 * idx, ease: "easeOut"}}
 						viewport={{ once: true }}
 						key={`tag${idx}`}
 						className="bg-accent py-2 flex items-center justify-center font-SpaceBase px-2 rounded-lg text-sm text-center"
@@ -84,7 +84,7 @@ function HeroSection() {
 				}}
 				initial="hidden"
 				whileInView="visible"
-				transition={{ delay: 0.4 }}
+				transition={{ delay: 0.4, ease: "easeOut"}}
 				viewport={{ once: true }}
 			>
 				A Creative Mind from Mumbai, India

@@ -30,6 +30,11 @@ html {
 	scroll-behavior: smooth;
 }
 
+::selection {
+	color: black;
+	background: theme("colors.primary");
+}
+
 @layer components {
 	.heading {
 		@apply font-SpaceMed md:text-7xl lg:text-8xl text-4xl text-header;
@@ -48,6 +53,6 @@ html {
 	}
 
 	.card {
-		@apply min-w-full h-full flex items-center border-2 p-8 border-primary backdrop-blur-sm bg-accent bg-opacity-10 hover:bg-opacity-15 transition-all rounded-md smallsubtext hover:shadow-[0px_0px_24px_#7580F0] justify-center gap-2;
+		@apply min-w-full h-full flex items-center border-2 p-8 border-primary backdrop-blur-sm bg-accent bg-opacity-10 hover:bg-opacity-15 transition-all rounded-md smallsubtext hover:shadow-[0px_0px_24px_#7580F0] justify-center gap-2 hover:scale-105;
 	}
 }
