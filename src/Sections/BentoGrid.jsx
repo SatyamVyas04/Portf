@@ -32,7 +32,7 @@ function BentoGrid() {
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true }}
-				className="flex flex-row flex-wrap justify-center sm:justify-stretch sm:grid sm:grid-cols-4 sm:grid-rows-3 gap-4 p-8 md:px-24 lg:px-32 xl:px-64 sm:py-16"
+				className="flex flex-row flex-wrap justify-center sm:justify-stretch sm:grid sm:grid-cols-4 sm:grid-rows-3 gap-4 p-6 md:px-24 lg:px-32 xl:px-64 sm:py-16"
 			>
 				<DragCloseDrawerComponent
 					title={Descriptions[0].title}

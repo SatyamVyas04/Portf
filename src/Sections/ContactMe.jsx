@@ -36,8 +36,8 @@ const Footer = () => {
 							alt="Github"
 							style={{
 								filter: "invert(1)",
-								height: "48px",
 							}}
+							className="h-8 sm:h-12"
 						/>
 					</a>
 					<a
@@ -49,8 +49,8 @@ const Footer = () => {
 							alt="LinkedIn"
 							style={{
 								filter: "invert(1)",
-								height: "48px",
 							}}
+							className="h-8 sm:h-12"
 						/>
 					</a>
 					<a href="mailto:vyas.satyam.04@gmail.com" target="_blank">
@@ -60,7 +60,7 @@ const Footer = () => {
 							viewBox="0 0 24 24"
 							strokeWidth={1.5}
 							stroke="currentColor"
-							className="w-12"
+							className="h-8 sm:h-12"
 						>
 							<path
 								strokeLinecap="round"

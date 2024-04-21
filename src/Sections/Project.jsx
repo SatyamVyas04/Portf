@@ -57,10 +57,10 @@ const Card = ({ card }) => {
 					target="_blank"
 					className="flex flex-col items-center"
 				>
-					<h1 className="cursor-pointer smallsubtext flex flex-row gap-2 items-center justify-center !text-[#222] p-4 bg-white rounded-full opacity-100 group-hover:opacity-0 transition-opacity absolute">
+					<h1 className="cursor-pointer smallsubtext flex flex-row gap-2 items-center justify-center !text-[#222] p-4 bg-white rounded-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] opacity-100 group-hover:opacity-0 transition-opacity absolute">
 						{card.title}
 					</h1>
-					<div className="cursor-pointer smallsubtext flex flex-row gap-2 items-center justify-center !text-[#222] p-4 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+					<div className="cursor-pointer smallsubtext flex flex-row gap-2 items-center justify-center !text-[#222] p-4 bg-white rounded-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] opacity-0 group-hover:opacity-100 transition-opacity">
 						<h1>Explore Now</h1>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"

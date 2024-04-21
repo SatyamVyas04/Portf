@@ -15,7 +15,6 @@ function HeroSection() {
 	];
 
 	const COLORS = [
-		"#F0F8FF",
 		"#89CFF0",
 		"#6CB4EE",
 		"#00B9E8",
