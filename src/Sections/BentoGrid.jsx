@@ -5,12 +5,14 @@ import LCLogo from "../assets/LeetCode.png";
 import GHLogo from "../assets/GitHubLogo.svg";
 import { DragCloseDrawerComponent } from "./BentoComponents/Drawer";
 import Descriptions from "./BentoComponents/Description";
+import { motion } from "framer-motion";
+motion;
 
 function BentoGrid() {
 	return (
 		<div id="AboutMe">
 			<h1 className="subtext text-center">About Me</h1>
-			<div className="flex flex-row flex-wrap justify-center sm:justify-stretch sm:grid sm:grid-cols-4 sm:grid-rows-3 gap-4 p-8 md:px-24 lg:px-32 xl:px-64 sm:py-16">
+			<motion.div className="flex flex-row flex-wrap justify-center sm:justify-stretch sm:grid sm:grid-cols-4 sm:grid-rows-3 gap-4 p-8 md:px-24 lg:px-32 xl:px-64 sm:py-16">
 				<DragCloseDrawerComponent
 					title={Descriptions[0].title}
 					description={Descriptions[0].description}
@@ -65,13 +67,23 @@ function BentoGrid() {
 						</div>
 					</div>
 				</DragCloseDrawerComponent>
+				<div className="card col-start-4 row-start-2 !p-0 overflow-hidden !bg-primary">
+					<img
+						src={myLogo}
+						alt="Satyam Vyas"
+						className="h-32"
+						style={{
+							filter: "invert(0.9)",
+						}}
+					/>
+				</div>
 				<DragCloseDrawerComponent
 					title={Descriptions[3].title}
 					description={Descriptions[3].description}
 					span="col-span-1 row-start-2"
 				>
 					<div className="card">
-						<h1 className="flex flex-row gap-2 items-center">
+						<h1 className="flex flex-row gap-1 items-center justify-center">
 							<p>3</p>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -107,23 +119,13 @@ function BentoGrid() {
 						/>
 					</div>
 				</DragCloseDrawerComponent>
-				<div className="card col-start-4 row-start-2 !p-0 overflow-hidden !bg-primary">
-					<img
-						src={myLogo}
-						alt="Satyam Vyas"
-						className="h-32"
-						style={{
-							filter: "invert(0.9)",
-						}}
-					/>
-				</div>
 				<DragCloseDrawerComponent
 					title={Descriptions[5].title}
 					description={Descriptions[5].description}
 					span="col-span-2 row-start-3"
 				>
 					<div className="card">
-						<div className="flex sm:flex-row flex-col gap-4 items-center justify-center">
+						<div className="flex flex-row gap-4 items-center justify-center">
 							<h1>Open Source Contributor</h1>
 							<img
 								src={GHLogo}
@@ -141,7 +143,7 @@ function BentoGrid() {
 						viewBox="0 0 24 24"
 						strokeWidth={1.5}
 						stroke="#222"
-						className="w-12"
+						className="sm:w-12 w-6"
 					>
 						<path
 							strokeLinecap="round"
@@ -151,9 +153,9 @@ function BentoGrid() {
 					</svg>
 				</div>
 				<a
-					href="SatyamVyasResume.pdf"
+					href="/SatyamVyasResume.pdf"
 					target="_blank"
-					className="card col-start-4 row-start-3 flex flex-col sm:flex-row gap-4 group cursor-pointer"
+					className="card col-start-4 row-start-3 flex flex-row gap-4 group cursor-pointer"
 				>
 					<h1>Resume</h1>
 					<svg
@@ -171,7 +173,7 @@ function BentoGrid() {
 						/>
 					</svg>
 				</a>
-			</div>
+			</motion.div>
 		</div>
 	);
 }
