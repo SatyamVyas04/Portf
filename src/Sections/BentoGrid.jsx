@@ -11,9 +11,11 @@ function BentoGrid() {
 	const variants = {
 		hidden: {
 			opacity: 0,
+			y: 200,
 		},
 		visible: {
 			opacity: 1,
+			y: 0,
 			transition: {
 				ease: "easeOut",
 				delay: 0.4,
@@ -29,7 +31,7 @@ function BentoGrid() {
 				variants={variants}
 				initial="hidden"
 				whileInView="visible"
-				viewport={{ once: true, margin: "-300px" }}
+				viewport={{ once: true }}
 				className="flex flex-row flex-wrap justify-center sm:justify-stretch sm:grid sm:grid-cols-4 sm:grid-rows-3 gap-4 p-8 md:px-24 lg:px-32 xl:px-64 sm:py-16"
 			>
 				<DragCloseDrawerComponent

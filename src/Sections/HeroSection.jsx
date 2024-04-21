@@ -14,14 +14,22 @@ function HeroSection() {
 		"Computer Science Student",
 	];
 
-	const COLORS = ["#00B9E8", "#007FFF", "#0070FF", "#246BCE", "#468FEA"];
+	const COLORS = [
+		"#F0F8FF",
+		"#89CFF0",
+		"#6CB4EE",
+		"#00B9E8",
+		"#318CE7",
+		"#0070FF",
+		"#468FEA",
+	];
 	const color = useMotionValue(COLORS[0]);
 	const backgroundImage = useMotionTemplate`radial-gradient(90% 600px at top center, ${color}, #222222)`;
 
 	useEffect(() => {
 		animate(color, COLORS, {
 			ease: "easeInOut",
-			duration: 4,
+			duration: 6,
 			repeat: Infinity,
 			repeatType: "mirror",
 		});
