@@ -38,7 +38,7 @@ function HeroSection() {
 				}}
 			></motion.span>
 			<motion.h1
-				className="heading mt-8 sm:mt-0 text-center sm:text-start underline decoration-primary underline-offset-4 sm:underline-offset-6 md:underline-offset-8 lg:underline-offset-[10px]"
+				className="heading mt-6 sm:mt-0 text-center sm:text-start underline decoration-primary underline-offset-4 sm:underline-offset-6 md:underline-offset-8 lg:underline-offset-[10px]"
 				initial={{ y: 20, opacity: 0 }}
 				whileInView={{ y: 0, opacity: 1 }}
 				transition={{ delay: 1.2, ease: "easeOut"}}

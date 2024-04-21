@@ -6,7 +6,7 @@ import LinkedIn from "../assets/LinkedInLogo.svg";
 
 function NavBar() {
 	return (
-		<div className="w-[75%] self-center shadow-sm shadow-primary absolute top-4 flex justify-between items-center flex-row rounded-full px-8 backdrop-blur-md bg-base bg-opacity-25">
+		<header className="w-[75%] self-center shadow-sm shadow-primary absolute top-4 flex justify-between items-center flex-row rounded-full px-8 backdrop-blur-md bg-base bg-opacity-25">
 			<img
 				src={Logo}
 				alt="Satyam Vyas"
@@ -19,7 +19,7 @@ function NavBar() {
 					<h1 className="font-SpaceMed sm:text-xl text-sm">Menu</h1>
 				</FlyoutLink>
 			</div>
-		</div>
+		</header>
 	);
 }
 
@@ -64,17 +64,20 @@ const MenuContent = () => {
 		<div
 			className="w-64 bg-base text-base p-8 rounded-xl grid gap-4 divide-y-2 divide-accent content-evenly"
 			style={{
-				boxShadow: "0 0 16px #7580F0",
+				boxShadow: "0 0 24px #7580F0",
 			}}
 		>
-			<a className="smallsubtext pt-3 hover:text-accent" href="#AboutMe">
+			<a className="smallsubtext pt-3 hover:text-primary" href="#AboutMe">
 				AboutMe
 			</a>
-			<a className="smallsubtext pt-3 hover:text-accent" href="#Projects">
+			<a
+				className="smallsubtext pt-3 hover:text-primary"
+				href="#Projects"
+			>
 				Projects
 			</a>
 			<a
-				className="smallsubtext pt-3 hover:text-accent"
+				className="smallsubtext pt-3 hover:text-primary"
 				href="#ContactMe"
 			>
 				Contact Me
@@ -102,6 +105,22 @@ const MenuContent = () => {
 							height: "32px",
 						}}
 					/>
+				</a>
+				<a href="mailto:vyas.satyam.04@gmail.com" target="_blank">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						strokeWidth={1.5}
+						stroke="currentColor"
+						className="w-8"
+					>
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z"
+						/>
+					</svg>
 				</a>
 			</p>
 		</div>

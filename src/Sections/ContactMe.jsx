@@ -1,5 +1,5 @@
 function ContactMe() {
-	return <div className="h-screen w-full"></div>;
+	return <footer id="ContactMe" className="h-[300px] w-full"></footer>;
 }
 
 export default ContactMe;

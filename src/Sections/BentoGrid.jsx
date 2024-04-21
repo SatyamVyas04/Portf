@@ -93,7 +93,7 @@ function BentoGrid() {
 					<img
 						src={myLogo}
 						alt="Satyam Vyas"
-						className="h-32"
+						className="h-24"
 						style={{
 							filter: "invert(0.9)",
 						}}
@@ -104,7 +104,7 @@ function BentoGrid() {
 					description={Descriptions[3].description}
 					span="col-span-1 row-start-2"
 				>
-					<div className="card">
+					<div className="card !bg-primary !text-[#222]">
 						<h1 className="flex flex-row gap-1 items-center justify-center">
 							<p>3</p>
 							<svg
@@ -179,7 +179,7 @@ function BentoGrid() {
 				<a
 					href="/SatyamVyasResume.pdf"
 					target="_blank"
-					className="card col-start-4 row-start-3 flex flex-row gap-4 group cursor-pointer"
+					className="card col-start-4 row-start-3 flex flex-row gap-4 group cursor-pointer hover:!bg-primary hover:!text-[#222]"
 				>
 					<h1>Resume</h1>
 					<svg

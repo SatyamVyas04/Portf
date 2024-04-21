@@ -4,6 +4,9 @@ export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
+			backgroundImage: {
+				topography: "url('/assets/topography.svg')", // Adjust path based on your setup
+			},
 			colors: {
 				base: "#222222",
 				primary: "#7580F0",
