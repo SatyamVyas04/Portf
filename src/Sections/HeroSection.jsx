@@ -14,14 +14,14 @@ function HeroSection() {
 		"Computer Science Student",
 	];
 
-	const COLORS = ["#7580F0", "#9966CC", "#8A2BE2", "#5A4FCF"];
+	const COLORS = ["#00B9E8", "#007FFF", "#0070FF", "#246BCE", "#468FEA"];
 	const color = useMotionValue(COLORS[0]);
 	const backgroundImage = useMotionTemplate`radial-gradient(90% 600px at top center, ${color}, #222222)`;
 
 	useEffect(() => {
 		animate(color, COLORS, {
 			ease: "easeInOut",
-			duration: 2,
+			duration: 4,
 			repeat: Infinity,
 			repeatType: "mirror",
 		});
@@ -41,7 +41,7 @@ function HeroSection() {
 				className="heading mt-6 sm:mt-0 text-center sm:text-start underline decoration-primary underline-offset-4 sm:underline-offset-6 md:underline-offset-8 lg:underline-offset-[10px]"
 				initial={{ y: 20, opacity: 0 }}
 				whileInView={{ y: 0, opacity: 1 }}
-				transition={{ delay: 1.2, ease: "easeOut"}}
+				transition={{ delay: 1.2, ease: "easeOut" }}
 				viewport={{ once: true }}
 			>
 				Satyam Vyas
@@ -61,7 +61,7 @@ function HeroSection() {
 						}}
 						initial="hidden"
 						whileInView="visible"
-						transition={{ delay: 0.4 * idx, ease: "easeOut"}}
+						transition={{ delay: 0.4 * idx, ease: "easeOut" }}
 						viewport={{ once: true }}
 						key={`tag${idx}`}
 						className="bg-accent py-2 flex items-center justify-center font-SpaceBase px-2 rounded-lg text-sm text-center"
@@ -84,7 +84,7 @@ function HeroSection() {
 				}}
 				initial="hidden"
 				whileInView="visible"
-				transition={{ delay: 0.4, ease: "easeOut"}}
+				transition={{ delay: 0.4, ease: "easeOut" }}
 				viewport={{ once: true }}
 			>
 				A Creative Mind from Mumbai, India
