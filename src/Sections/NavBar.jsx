@@ -1,5 +1,5 @@
 import Logo from "../assets/Logo.svg";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, animate } from "framer-motion";
 import { useState } from "react";
 import GitHub from "../assets/GitHubLogo.svg";
 import LinkedIn from "../assets/LinkedInLogo.svg";
