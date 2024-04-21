@@ -6,13 +6,32 @@ import GHLogo from "../assets/GitHubLogo.svg";
 import { DragCloseDrawerComponent } from "./BentoComponents/Drawer";
 import Descriptions from "./BentoComponents/Description";
 import { motion } from "framer-motion";
-motion;
 
 function BentoGrid() {
+	const variants = {
+		hidden: {
+			opacity: 0,
+		},
+		visible: {
+			opacity: 1,
+			transition: {
+				ease: "easeOut",
+				delay: 0.4,
+				staggerChildren: 0.4,
+			},
+		},
+	};
+
 	return (
 		<div id="AboutMe">
 			<h1 className="subtext text-center">About Me</h1>
-			<motion.div className="flex flex-row flex-wrap justify-center sm:justify-stretch sm:grid sm:grid-cols-4 sm:grid-rows-3 gap-4 p-8 md:px-24 lg:px-32 xl:px-64 sm:py-16">
+			<motion.div
+				variants={variants}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true, margin: "-300px" }}
+				className="flex flex-row flex-wrap justify-center sm:justify-stretch sm:grid sm:grid-cols-4 sm:grid-rows-3 gap-4 p-8 md:px-24 lg:px-32 xl:px-64 sm:py-16"
+			>
 				<DragCloseDrawerComponent
 					title={Descriptions[0].title}
 					description={Descriptions[0].description}
@@ -25,6 +44,9 @@ function BentoGrid() {
 								src={csi}
 								alt="CSI SPIT"
 								className="sm:h-[48px] h-8"
+								style={{
+									filter: "drop-shadow(0 0 24px #7580F0)",
+								}}
 							/>
 						</div>
 					</div>
@@ -61,7 +83,7 @@ function BentoGrid() {
 							<img
 								src={techstack}
 								alt="TechStack"
-								className="absolute opacity-0 group-hover:opacity-50 transition-all"
+								className="absolute -z-10 opacity-0 group-hover:opacity-50 transition-all"
 							/>
 							<p>Tech Stack</p>
 						</div>
@@ -131,7 +153,9 @@ function BentoGrid() {
 								src={GHLogo}
 								alt="Github Logo"
 								className="h-12"
-								style={{ filter: "invert(1)" }}
+								style={{
+									filter: "invert(1) drop-shadow(0 0 24px #7580F0)",
+								}}
 							/>
 						</div>
 					</div>

@@ -47,10 +47,33 @@ const Card = ({ card }) => {
 				}}
 				className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
 			></div>
-			<div className="absolute inset-0 z-10 grid place-content-center">
-				<p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
-					{card.title}
-				</p>
+			<div className="absolute w-full h-full z-10 grid place-content-center group bg-transparent group-hover:bg-black/50 group transition-all">
+				<a
+					href={card.link}
+					target="_blank"
+					className="flex flex-col items-center"
+				>
+					<h1 className="cursor-pointer smallsubtext flex flex-row gap-2 items-center justify-center !text-[#222] p-4 bg-white rounded-full opacity-100 group-hover:opacity-0 transition-opacity absolute">
+						{card.title}
+					</h1>
+					<div className="cursor-pointer smallsubtext flex flex-row gap-2 items-center justify-center !text-[#222] p-4 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+						<h1>Explore Now</h1>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							strokeWidth={1.5}
+							stroke="currentColor"
+							className="w-6 h-6"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+							/>
+						</svg>
+					</div>
+				</a>
 			</div>
 		</div>
 	);
@@ -60,38 +83,45 @@ export default Project;
 
 const cards = [
 	{
-		url: "/imgs/abstract/1.jpg",
-		title: "Title 1",
+		url: "/ProjectImages/Hackathon.png",
+		title: "SPIT Hackathon 2024",
+		link: "https://hackathon.spit.ac.in/",
 		id: 1,
 	},
 	{
-		url: "/imgs/abstract/2.jpg",
-		title: "Title 2",
+		url: "/ProjectImages/AgeCalculator.png",
+		title: "Age Calculator",
+		link: "https://satyamvyas04-agecalculator.vercel.app/",
 		id: 2,
 	},
 	{
-		url: "/imgs/abstract/3.jpg",
-		title: "Title 3",
+		url: "/ProjectImages/NewsLetter.png",
+		title: "NewsLetter Form",
+		link: "https://satyamvyas04.github.io/LearningFrontEnd/Projects/NewsLetter/",
 		id: 3,
 	},
 	{
-		url: "/imgs/abstract/4.jpg",
-		title: "Title 4",
+		url: "/ProjectImages/FAQAccordian.png",
+		title: "FAQ Accordian",
+		link: "https://satyamvyas04.github.io/LearningFrontEnd/Projects/FAQ-Accordion/",
 		id: 4,
 	},
 	{
-		url: "/imgs/abstract/5.jpg",
-		title: "Title 5",
+		url: "/ProjectImages/GSAPLoader.png",
+		title: "GSAP Loader",
+		link: "https://satyamvyas04.github.io/LearningFrontEnd/Projects/GSAPLoader/",
 		id: 5,
 	},
 	{
-		url: "/imgs/abstract/6.jpg",
-		title: "Title 6",
+		url: "/ProjectImages/CompanyStatsCard.png",
+		title: "Statistics Card",
+		link: "https://satyamvyas04.github.io/LearningFrontEnd/Projects/CompanyStatsCard/",
 		id: 6,
 	},
 	{
-		url: "/imgs/abstract/7.jpg",
-		title: "Title 7",
+		url: "/ProjectImages/ProductReview.png",
+		title: "Product Card",
+		link: "https://satyamvyas04.github.io/LearningFrontEnd/Projects/ProductCard/",
 		id: 7,
 	},
 ];
